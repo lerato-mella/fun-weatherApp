@@ -4,6 +4,19 @@ function displayTemperature(response) {
     let cityElement = document.querySelector("#current-city");
     cityElement.innerHTML = response.data.city;
     temperatureElement.innerHTML = temperature;
+
+    let emojiElement = document.querySelector("#weather-emoji");
+    let emoji;
+
+    if (temperature > 15) {
+        emoji = "☀️";
+    } else {
+        emoji = "❄️";
+    }
+
+    emojiElement.innerHTML = emoji;
+
+   
   }
   
   function search(event) {
@@ -13,7 +26,7 @@ function displayTemperature(response) {
   
     let apiKey = "182aec061b30d2o02f443tf58538a785";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInputElement.value}&key=${apiKey}&units=metric`;
-  
+    
     axios.get(apiUrl).then(displayTemperature);
   }
   
