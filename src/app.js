@@ -13,6 +13,10 @@ function displayTemperature(response) {
 
     let windElement=document.querySelector("#current-speed-value");
     windElement.innerHTML=`${response.data.wind.speed}km/h`;
+
+   let weatherElement=document.querySelector("#current-weather-description");
+   console.log("Weather Description: ", response.data.condition.description);
+   weatherElement.innerHTML=`${response.data.condition.description}`;
   
   }
   
