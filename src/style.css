@@ -98,7 +98,7 @@ body {
     color: rgba(39, 33, 66, 0.4);
   }
 
-  .weather-forcast{
+  .weather-forecast{
     display: flex;
     margin-top: 35px;
     justify-content: space-around;
